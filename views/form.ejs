@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student Registration</title>
+
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Student Registration</h2>
+
+            <form action="/save" method="POST" enctype="multipart/form-data">
+                <div class="input-box">
+                    <label>Student Name</label>
+                    <input type="text" name="student_name" placeholder="Enter Student Name">
+                </div>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Enter Email">
+                </div>
+
+                <div class="input-box">
+                    <label>Mobile</label>
+                    <input type="text" name="mobile" placeholder="Enter Mobile Number">
+                </div>
+
+                <div class="input-box">
+                    <label>Course</label>
+                    <select name="course">
+                        <option>Choose Course</option>
+                        <option>BCA</option>
+                        <option>BSc</option>
+                        <option>BBA</option>
+                        <option>MCA</option>
+                        <option>MSc</option>
+                    </select>
+                </div>
+
+                <div class="input-box">
+                    <label>City</label>
+                    <input type="text" name="city" placeholder="Enter City">
+                </div>
+
+                <div class="input-box">
+                    <label>Student Photo</label>
+                    <input type="file" name="photo">
+                </div>
+
+                <button class="btn" type="submit">Save Student</button>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>

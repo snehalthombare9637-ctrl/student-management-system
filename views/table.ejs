@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Student List</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="table.css">
+    </head>
+<body>
+    <div class="container">
+    <div class="heading">
+        <h2>Student List</h2>
+        <a href="/" class="add-btn">+ Add Student</a>
+    </div>
+    <div class="table-box">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Course</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+            <% for(var i=0;i<stud.length;i++){ %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= stud[i].student_name %></td>
+                    <td><%= stud[i].email %></td>
+                    <td><%= stud[i].mobile %></td>
+                    <td><%= stud[i].course %></td>
+                    <td><%= stud[i].city %></td>
+                    <td>
+                        <img src="<%= stud[i].photo %>">
+                    </td>
+                    <td>
+                        <a href="/edit/<%= stud[i].stud_id %>" class="edit-btn">
+                            Edit
+                        </a>
+                        <a href="/delete/<%= stud[i].stud_id %>/<%= stud[i].photo %>" class="delete-btn">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+    </div>
+</body>
+</html>
